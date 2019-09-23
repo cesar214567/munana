@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+    <!-- Compiled and minified CSS -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="/static/administrador.js"></script>
+    <style type="text/css">
+.blanco{
+    color: #ffffff ;
+}
+.texto{
+    min-height: 100%;
+}
+.imagen{
+max-height: 10%;
+    max-width: 100%;
+}
+
+</style>
+</head>
+<body class="grey darken-3" onload="get_current()">
+   <nav>
+    <div class="nav-wrapper teal lighten-1 ">
+      <a href="/" class="brand-logo black-text" style="padding-left: 10px"><img src="/static/images/logo.png" width="24%">Munana</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/Academias" class="black-text">Academias</a></li>
+          <li><a href="/Curso" class="black-text">Cursos</a></li>
+          <li><a href="/Paquete" class="black-text">Paquetes</a></li>
+          <li><a href="/Login" class="black-text">Comentarios</a></li>
+      </ul>
+    </div>
+   </nav>
+   <br>
+   <br>
+
+
+
+<div class="row">
+    <div class="col s2"></div>
+    <div class="col s3 ">
+      <div class="card teal lighten-1">
+          <div class="card-action ">
+        <div class="card-content black-text center"><a href="crud_cursos.html">CURSOS</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col s2"></div>
+    <div class="col s3 ">
+      <div class="card  teal lighten-1">
+          <div class="card-action">
+        <div class="card-content black-text center"><a href="crud_contacto.html">Contacto</a></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br/>
+    <br/>
+<br/>
+
+<div class="row">
+    <div class="col s2"></div>
+    <div class="col s3 ">
+      <div class="card teal lighten-1">
+          <div class="card-action">
+        <div class="card-content black-text center"><a href="crud_comentarios.html">Comentarios</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col s2"></div>
+    <div class="col s3 ">
+      <div class="card teal lighten-1 ">
+          <div class="card-action">
+        <div class="card-content black-text center"><a href="crud_academias.html">Academias</a></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br/>
+    <br/>
+<br/>
+
+<div class="row">
+    <div class="col s2"></div>
+    <div class="col s3 ">
+      <div class="card  teal lighten-1">
+          <div class="card-action">
+        <div class="card-content black-text center"><a href="crud_paquete.html">Paquetes</a></div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</body>
+</html>

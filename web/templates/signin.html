@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/static/signin.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+ <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel = "stylesheet"
+         href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet"
+         href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+      <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>
+    <style type="text/css">
+        .blanco{
+    color: #ffffff ;
+}
+.rojo{
+    color:red;
+}
+    </style>
+
+
+</head>
+<body class="grey darken-3 container">
+<br>
+<br>
+<br>
+<div class="row ">
+    <div class="col s4"></div>
+    <form class="col s4 card teal lighten-1">
+        <div class="card-content">
+            <input type="text" name="username" id="username" placeholder="USERNAME "/>
+            <input type="password" name="password" id="password" placeholder="PASSWORD "/>
+            <input type="text" name="username" id="nombre" placeholder="NOMBRE"/>
+            <input type="text" name="password" id="telefono" placeholder="NUMERO DE TELEFONO"/>
+            <input type="email" name="username" id="email" placeholder="EMAIL"/>
+            <a class="btn dropdown-button" href="#" id="distrito" data-activates="dropdown">Distrito<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                <ul id="dropdown" class="dropdown-content" style="width: 157px; position: absolute; top: 81.5875px; left: 49.5px; opacity: 1; display: none;">
+                    <li><a href="#" onclick="nombre('Ancon')">Ancon</a></li>
+                    <li><a href="#" onclick="nombre('Ate Vitarte')">Ate Vitarte</a></li>
+                    <li><a href="#" onclick="nombre('Barranco')">Barranco</a></li>
+		            <li><a href="#" onclick="nombre('Breña')">Breña</a></li>
+                    <li><a href="#" onclick="nombre('Carabayllo')">Carabayllo</a></li>
+                    <li><a href="#" onclick="nombre('Chaclacayo')">Chaclacayo</a></li>
+		            <li><a href="#" onclick="nombre('Chorrillos')">Chorrillos</a></li>
+                    <li><a href="#" onclick="nombre('Cieneguilla')">Cieneguilla</a></li>
+                    <li><a href="#" onclick="nombre('Comas')">Comas</a></li>
+		            <li><a href="#" onclick="nombre('El Agustino')">El Agustino</a></li>
+                    <li><a href="#" onclick="nombre('El Huaycan')">Huaycan</a></li>
+                    <li><a href="#" onclick="nombre('Independencia')">Independencia</a></li>
+		            <li><a href="#" onclick="nombre('Jesus Maria')">Jesus Maria</a></li>
+                    <li><a href="#" onclick="nombre('La Molina')">La Molina</a></li>
+                    <li><a href="#" onclick="nombre('La Victoria')">La Victoria</a></li>
+		            <li><a href="#" onclick="nombre('Lima')">Lima</a></li>
+                    <li><a href="#" onclick="nombre('Lince')">Lince</a></li>
+                    <li><a href="#" onclick="nombre('Los Olivos')">Los Olivos</a></li>
+		            <li><a href="#" onclick="nombre('Lurigancho')">Lurigancho</a></li>
+                    <li><a href="#" onclick="nombre('Lurin')"> Lurin</a></li>
+                    <li><a href="#" onclick="nombre('Magdalena del Mar')">Magdalena del Mar</a></li>
+		            <li><a href="#" onclick="nombre('Miraflores')">Miraflores</a></li>
+                    <li><a href="#" onclick="nombre('Pachacamac')">Pachacamac</a></li>
+                    <li><a href="#" onclick="nombre('Pucusana')">Pucusana</a></li>
+		            <li><a href="#" onclick="nombre('Pueblo Libre')">Pueblo Libre</a></li>
+                    <li><a href="#" onclick="nombre('Puente Piedra')">Puente Piedra</a></li>
+                    <li><a href="#" onclick="nombre('Punta Hermosa')">Punta Hermosa</a></li>
+		            <li><a href="#" onclick="nombre('Punta Negra')">Punta Negra</a></li>
+                    <li><a href="#" onclick="nombre('Rimac')">Rimac</a></li>
+                    <li><a href="#" onclick="nombre('San Bartolo')">San Bartolo</a></li>
+		            <li><a href="#" onclick="nombre('San Borja')">San Borja</a></li>
+                    <li><a href="#" onclick="nombre('San Isidro')">San Isidro</a></li>
+                    <li><a href="#" onclick="nombre('San Juan de Lurigancho')">San Juan de Lurigancho</a></li>
+		            <li><a href="#" onclick="nombre('San Juan de Miraflores')">San Juan de Miraflores</a></li>
+                    <li><a href="#" onclick="nombre('San Luis')">San Luis</a></li>
+                    <li><a href="#" onclick="nombre('San Martin de Porres')">San Martin de Porres</a></li>
+		            <li><a href="#" onclick="nombre('San Miguel')">San Miguel</a></li>
+                    <li><a href="#" onclick="nombre('Santa Anita')">Santa Anita</a></li>
+                    <li><a href="#" onclick="nombre('Santa Maria de Huachipa')">Santa Maria de Huachipa</a></li>
+		            <li><a href="#" onclick="nombre('Santa Maria del Mar')">Santa Maria del Mar</a></li>
+                    <li><a href="#" onclick="nombre('Santa Rosa')">Santa Rosa</a></li>
+                    <li><a href="#" onclick="nombre('Santiago de Surco')">Santiago de Surco</a></li>
+                    <li><a href="#" onclick="nombre('Surquillo')">Surquillo</a></li>
+                    <li><a href="#" onclick="nombre('Villa El Salvador')">Villa El Salvador</a></li>
+                    <li><a href="#" onclick="nombre('Villa Maria del Triunfo')">Villa Maria del Triunfo</a></li>
+
+                </ul>
+            <input type="text" name="password" id="nombre_de_hijo" placeholder="Nombre de su hijo(a)*"/>
+            <input type="number" name="password" id="edad_de_hijo" placeholder="Edad de su hijo(a) *"/><div class="blanco">*this areas are not necesary</div>
+            <br>
+            <input type="button" value="sign in" onclick="PostContacto()"/>
+            <input type="button" value="go back" onclick="returnToLogin()"/>
+            <div class="rojo" id="alarma"></div>
+
+
+        </div>
+            <img src="" id="action"/>
+
+    </form>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

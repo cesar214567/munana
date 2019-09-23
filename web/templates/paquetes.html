@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+    <!-- Compiled and minified CSS -->
+    <script src="/static/cursos.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style type="text/css">
+.blanco{
+    color: #ffffff ;
+}
+.texto{
+    min-height: 100%;
+}
+.imagen{
+max-height: 10%;
+    max-width: 100%;
+}
+
+</style>
+
+</head>
+<body class="grey darken-3" onload="getAll()">
+   <nav>
+    <div class="nav-wrapper teal lighten-1 ">
+      <a href="/" class="brand-logo blanco" style="padding-left: 10px"><img src="/static/images/logo.png" width="24%">Munana</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/Academias" class="blanco">Academias</a></li>
+          <li><a href="/Curso" class="blanco">Cursos</a></li>
+          <li><a href="/Paquete" class="blanco">Paquetes</a></li>
+          <li><a href="/Login " class="blanco">Comentarios</a></li>
+      </ul>
+    </div>
+   </nav>
+   <br>
+   <br>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-3 ">
+      <div class="card teal lighten-1">
+          <div class="card-action ">
+              <div class="card-content blanco center"><h4>Plan {{data[0].Nombre}}</h4>{{data[0].Beneficios}}</div>
+          </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-3 ">
+      <div class="card  teal lighten-1">
+          <div class="card-action">
+        <div class="card-content blanco center"><h4>Plan {{data[1].Nombre}}</h4>{{data[1].Beneficios}}</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br/>
+    <br/>
+<br/>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-3 ">
+      <div class="card teal lighten-1">
+          <div class="card-action">
+        <div class="card-content blanco center"><h4>Plan {{data[2].Nombre}}</h4>{{data[2].Beneficios}}</div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-3 ">
+      <div class="card teal lighten-1 ">
+          <div class="card-action">
+        <div class="card-content blanco center"><h4>Plan {{data[3].Nombre}}</h4>{{data[3].Beneficios}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

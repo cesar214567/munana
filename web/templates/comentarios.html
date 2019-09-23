@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+    <!-- Compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="/static/comentarios.js"></script>
+    <style type="text/css">
+.blanco{
+    color: #ffffff ;
+}
+.rojo{
+    color: red;
+
+}
+.texto{
+    min-height: 30%;
+}
+.imagen {
+    max-height: 10%;
+    max-width: 100%;
+}
+        body {
+
+    -o-background-size:100% 100%;             /*  Opera  */
+    -webkit-background-size:100% 100%;        /*  Safari  */
+    -khtml-background-size:100% 100%;         /*  Konqueror  */
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+	}
+
+</style>
+</head>
+<body background="/static/images/niña.jpg" onload="get_current();getCursos();getPaquetes()" >
+   <nav>
+    <div class="nav-wrapper teal lighten-1 ">
+      <a href="/" class="brand-logo blanco" style="padding-left: 10px"><img src="/static/images/logo.png" width="24%">Munana</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/Academias" class="blanco">Academias</a></li>
+          <li><a href="/Curso" class="blanco">Cursos</a></li>
+          <li><a href="/Paquete" class="blanco">Paquetes</a></li>
+          <li><a href="/Login " class="blanco">Comentarios</a></li>
+      </ul>
+    </div>
+   </nav>
+   <br>
+   <br>
+
+<div class="container">
+  <div class="row">
+      <div class="col-3"></div>
+    <div class="col-5 teal lighten-1 blanco" >
+        <div id="">
+            ¿En que disciplina estarias interesado?
+        </div>
+        <br>
+        <div class="row ">
+            <div class="col s1">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="dropdownn1">Disciplina1</a>
+                <ul id='dropdown1' class='dropdown-content'>
+
+                </ul>
+            </div>
+            <div class="col s1">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown2' id="dropdownn2">Disciplina2</a>
+                <ul id='dropdown2' class='dropdown-content'>
+
+                </ul>
+            </div>
+            <div class="col s1">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown3' id="dropdownn3">Disciplina3</a>
+                <ul id='dropdown3' class='dropdown-content'>
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            ¿Cual es el paquete que mas te acomoda?
+        </div>
+        <br>
+        <br>
+        <div>
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown4' id="dropdownn4">Paquete</a>
+            <ul id='dropdown4' class='dropdown-content'>
+
+            </ul>
+            <div id="presionado" class="rojo">
+
+            </div>
+        </div>
+        <div>
+            Dejanos tu comentario
+        </div>
+        <textarea id="textarea" class="bg-white texto"></textarea>
+        <div id="boton">
+           <a class="waves-effect waves-light btn " onclick="enviar()"><p class="blanco">Enviar</p></a>
+        </div>
+        <br><br><br><br><br>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>
