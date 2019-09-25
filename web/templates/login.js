@@ -1,5 +1,5 @@
 function gotosignin() {
-    window.location = "munana.herokuapp.com/signin";
+    window.location = "http://munana.herokuapp.com/signin";
 }
 function getData(){
 
