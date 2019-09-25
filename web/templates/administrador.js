@@ -8,7 +8,7 @@ function get_current(){
                 //alert(JSON.stringify(response));
                 //response=JSON.stringify(response);
                 if (response["message"]=="Unauthorized"){
-                var c="http://www.munana.herokuapp.com/Login";
+                var c="munana.herokuapp.com/Login";
                 window.location=c;
                 }
 

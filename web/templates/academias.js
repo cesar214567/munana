@@ -9,10 +9,10 @@ function get_current(){
                 //response=JSON.stringify(response);
 
                 if (response["message"]=="Unauthorized"){
-                var c="http://www.munana.herokuapp.com/login";
+                var c="munana.herokuapp.com/login";
                 window.location=c;
                 }else{
-                var c="http://www.munana.herokuapp.com/Comentario";
+                var c="munana.herokuapp.com/Comentario";
                 window.location=c;
                 }
 

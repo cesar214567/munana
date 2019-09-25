@@ -9,7 +9,7 @@ function get_current(){
                 //response=JSON.stringify(response);
 
                 if (response["user"]!="Paulo_admin_master"){
-                var c="http://www.munana.herokuapp.com/Login";
+                var c="www.munana.herokuapp.com/Login";
                 window.location=c;
                 }
 
@@ -23,7 +23,7 @@ function get_current(){
 }
 
 $(function(){
-    var url = "http://www.munana.herokuapp.com/Comentarios";
+    var url = "munana.herokuapp.com/Comentarios";
 
 
     $("#grid").dxDataGrid({
@@ -71,7 +71,7 @@ $(function(){
             lookup: {
                     dataSource: DevExpress.data.AspNet.createStore({
                         key: "id",
-                        loadUrl: "http://www.munana.herokuapp.com/paquetes",
+                        loadUrl: "munana.herokuapp.com/paquetes",
                         onBeforeSend: function(method, ajaxOptions) {
                             ajaxOptions.xhrFields = { withCredentials: true };
                         }
@@ -84,7 +84,7 @@ $(function(){
             lookup: {
                     dataSource: DevExpress.data.AspNet.createStore({
                         key: "id",
-                        loadUrl: "http://www.munana.herokuapp.com/contacto",
+                        loadUrl: "munana.herokuapp.com/contacto",
                         onBeforeSend: function(method, ajaxOptions) {
                             ajaxOptions.xhrFields = { withCredentials: true };
                         }

@@ -1,5 +1,5 @@
 function gotosignin() {
-    window.location = "http://www.munana.herokuapp.com/signin";
+    window.location = "munana.herokuapp.com/signin";
 }
 function getData(){
 
@@ -31,16 +31,16 @@ function getData(){
                     //console.log(response);
                     if (response["message"] == "admin") {
 
-                        var c = "http://www.munana.herokuapp.com/static/administrador.html";
+                        var c = "munana.herokuapp.com/static/administrador.html";
                         window.location = c;
                     }else{
-                        window.location ="http://www.munana.herokuapp.com/Comentario"
+                        window.location ="munana.herokuapp.com/Comentario"
                     }
                 }
             },
             error: function(response){
                 //alert(JSON.stringify(response));
-                var c="http://www.munana.herokuapp.com/static/administrador.html";
+                var c="munana.herokuapp.com/static/administrador.html";
 
             }
         });

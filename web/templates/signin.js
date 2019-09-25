@@ -1,5 +1,5 @@
 function returnToLogin() {
-    window.location="http://www.munana.herokuapp.com/Login"
+    window.location="munana.herokuapp.com/Login"
 }
 function nombre(value){
     document.getElementById("distrito").innerText=value;
@@ -47,7 +47,7 @@ function PostContacto(){
                     document.getElementById("alarma").innerText = "el username ya esta siendo usado";
                     return;
                 }
-                window.location = "http://www.munana.herokuapp.com/Login";
+                window.location = "munana.herokuapp.com/Login";
             },
             error: function (response) {
             }
