@@ -10,7 +10,7 @@ function getData(){
             //alert("introducir password o contraseña")
             document.getElementById("alarma").innerText="Introducir usuario y contraseña"
         }
-        var message = JSON.stringify({
+        var message = JSON.stringify({ 
                 "username": username,
                 "password": password
             });
