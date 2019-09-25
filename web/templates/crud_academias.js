@@ -8,7 +8,7 @@ function get_current(){
                 //alert(JSON.stringify(response));
                 //response=JSON.stringify(response);
                 if (response["user"]!="Paulo_admin_master"){
-                var c="http://127.0.0.1:8080/Login";
+                var c="http://www.munana.herokuapp.com/Login";
                 window.location=c;
                 }
 
@@ -22,7 +22,7 @@ function get_current(){
 }
 
 $(function(){
-    var url = "http://127.0.0.1:8080/academias";
+    var url = "http://www.munana.herokuapp.com/academias";
 
 
     $("#grid").dxDataGrid({
