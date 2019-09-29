@@ -9,7 +9,7 @@ function get_current(){
                 //response=JSON.stringify(response);
 
                 if (response["user"]!="Paulo_admin_master"){
-                var c="www.munana.herokuapp.com/Login";
+                var c="http://munana.herokuapp.com/Login";
                 window.location=c;
                 }
 
@@ -23,7 +23,7 @@ function get_current(){
 }
 
 $(function(){
-    var url = "munana.herokuapp.com/Comentarios";
+    var url = "http://munana.herokuapp.com/Comentarios";
 
 
     $("#grid").dxDataGrid({
@@ -71,7 +71,7 @@ $(function(){
             lookup: {
                     dataSource: DevExpress.data.AspNet.createStore({
                         key: "id",
-                        loadUrl: "munana.herokuapp.com/paquetes",
+                        loadUrl: "http://munana.herokuapp.com/paquetes",
                         onBeforeSend: function(method, ajaxOptions) {
                             ajaxOptions.xhrFields = { withCredentials: true };
                         }
@@ -84,7 +84,7 @@ $(function(){
             lookup: {
                     dataSource: DevExpress.data.AspNet.createStore({
                         key: "id",
-                        loadUrl: "munana.herokuapp.com/contacto",
+                        loadUrl: "http://munana.herokuapp.com/contacto",
                         onBeforeSend: function(method, ajaxOptions) {
                             ajaxOptions.xhrFields = { withCredentials: true };
                         }
@@ -92,6 +92,34 @@ $(function(){
                     displayExpr: "Nombre"
                 }
       },{
+        dataField: "Contacto.Telefono",
+        caption: "Contacto",
+        lookup: {
+                dataSource: DevExpress.data.AspNet.createStore({
+                    key: "id",
+                    loadUrl: "http://munana.herokuapp.com/contacto",
+                    onBeforeSend: function(method, ajaxOptions) {
+                        ajaxOptions.xhrFields = { withCredentials: true };
+                    }
+                }),
+                displayExpr: "Telefono"
+            },
+            allowEditing: false
+        },{
+            dataField: "Contacto.Correo",
+            caption: "Contacto",
+            lookup: {
+                    dataSource: DevExpress.data.AspNet.createStore({
+                        key: "id",
+                        loadUrl: "http://munana.herokuapp.com/contacto",
+                        onBeforeSend: function(method, ajaxOptions) {
+                            ajaxOptions.xhrFields = { withCredentials: true };
+                        }
+                    }),
+                    displayExpr: "Correo    "
+                },
+                allowEditing: false
+            },{
             dataField:"Mensaje",
             }
 

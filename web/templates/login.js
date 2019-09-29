@@ -31,16 +31,16 @@ function getData(){
                     //console.log(response);
                     if (response["message"] == "admin") {
 
-                        var c = "munana.herokuapp.com/static/administrador.html";
+                        var c = "http://munana.herokuapp.com/static/administrador.html";
                         window.location = c;
                     }else{
-                        window.location ="munana.herokuapp.com/Comentario"
+                        window.location ="http://munana.herokuapp.com/Comentario"
                     }
                 }
             },
             error: function(response){
                 //alert(JSON.stringify(response));
-                var c="munana.herokuapp.com/static/administrador.html";
+                var c="http://munana.herokuapp.com/static/administrador.html";
 
             }
         });
