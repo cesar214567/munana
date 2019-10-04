@@ -40,7 +40,7 @@ class Paquete(connector.Manager.Base):
 class Comentarios(connector.Manager.Base):
     __tablename__ = 'comentarios'
     id = Column(Integer, Sequence('comentarios_id_seq'), primary_key=True)
-    Enviado_en = Column( default=datetime.datetime.now())
+    Enviado_en = Column(DateTime,default=datetime.datetime.now())
     DisciplinaA=Column(String(35),nullable=False)
     DisciplinaB = Column(String(35), nullable=False)
     DisciplinaC = Column(String(35), nullable=True)
