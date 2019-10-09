@@ -6,7 +6,7 @@ function getData(){
         var username = $('#username').val();
 
         var password = $('#password').val();
-        if (username==="" || password===""){
+        if (username=="" || password==""){
             //alert("introducir password o contraseña")
             document.getElementById("alarma").innerText="Introducir usuario y contraseña"
         }
