@@ -48,7 +48,6 @@ function PostContacto(){
                     document.getElementById("alarma").innerText = "el username ya esta siendo usado";
                     return;
                 }
-                window.location = "http://munana.herokuapp.com/Login";
                 console.log(response);
             },
             error: function (response) {
