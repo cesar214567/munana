@@ -27,6 +27,7 @@ function PostContacto(){
             type: 'GET',
             success: function (response) {
                 alert(JSON.stringify(response));
+                console.log(response);
                 //response=JSON.stringify(response);
                 if (response.length == 0) {
                     $.ajax({
@@ -48,6 +49,7 @@ function PostContacto(){
                     return;
                 }
                 window.location = "http://munana.herokuapp.com/Login";
+                console.log(response);
             },
             error: function (response) {
             }
