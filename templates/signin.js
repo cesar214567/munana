@@ -21,7 +21,7 @@ function PostContacto(){
         document.getElementById("alarma").innerText="porfavor rellene todos los campos obligatorios";
         return;
     }
-    if(nombre_de_hijo!="" && edad_de_hijo!="") {
+    if(nombre_de_hijo=="" && edad_de_hijo=="") {
         $.ajax({
             url: '/contacto/' + username,
             type: 'GET',
