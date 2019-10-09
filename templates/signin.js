@@ -26,9 +26,9 @@ function PostContacto(){
             url: '/contacto/' + username,
             type: 'GET',
             success: function (response) {
-                //alert(JSON.stringify(response));
+                alert(JSON.stringify(response));
                 //response=JSON.stringify(response);
-                if (response.length === 0) {
+                if (response.length == 0) {
                     $.ajax({
                         url: '/contacto2',
                         type: 'POST',
