@@ -26,11 +26,10 @@ function PostContacto(){
             url: '/contacto/' + username,
             type: 'GET',
             success: function (response) {
-                alert(JSON.stringify(response));
-                console.log(response);
+                //alert(JSON.stringify(response)); 
                 //response=JSON.stringify(response);
                 if (response.length == 0) {
-                    console.log(text2);
+                    
                     $.ajax({
                         url: '/contacto2',
                         type: 'POST',
@@ -49,7 +48,8 @@ function PostContacto(){
                     document.getElementById("alarma").innerText = "el username ya esta siendo usado";
                     return;
                 }
-                console.log(response);
+                window.location = "http://127.0.0.1:8080/Login";
+                
             },
             error: function (response) {
             }
