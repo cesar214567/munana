@@ -29,7 +29,7 @@ function PostContacto(){
                 alert(JSON.stringify(response));
                 console.log(response);
                 //response=JSON.stringify(response);
-                if (response.length == "0") {
+                if (response.length == 0) {
                     console.log(text2);
                     $.ajax({
                         url: '/contacto2',

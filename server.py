@@ -115,8 +115,6 @@ def create_contacto2():
         Nombre=c['Nombre'],
         Telefono=c['Telefono'],
         Correo=c['Correo'],
-        Nombre_de_hijo=c['Nombre_de_hijo'],
-        Edad_de_hijo=c['Edad_de_hijo'],
         Distrito=c['Distrito'])
     session = db.getSession(engine)
     session.add(contacto)

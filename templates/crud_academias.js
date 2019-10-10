@@ -62,8 +62,12 @@ $(function(){
             dataField: "Descripcion"
         },{
             dataField: "Distrito"
+        },{
+            dataField: "Geo_x"
+        },{
+            dataField: "Geo_y"
         }
-
+        
 
       ]
     }).dxDataGrid("instance");
