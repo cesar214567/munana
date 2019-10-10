@@ -65,7 +65,7 @@ function PostContacto(){
                     if (response.length == 0) {
                         
                         $.ajax({
-                            url: '/contacto',
+                            url: '/contacto3',
                             type: 'POST',
                             contentType: 'application/json',
                             data: text2,
