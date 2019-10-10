@@ -57,8 +57,8 @@ class Academia(connector.Manager.Base):
     Direccion=Column(String(80),nullable=False)
     Descripcion=Column(String(80),nullable=False)
     Distrito=Column(String(40),nullable=False)
-    Geo_x=Column(Float,nullable=False)
-    Geo_y=Column(Float,nullable=False)
+    Geo_x=Column(Float(10,6),nullable=False)
+    Geo_y=Column(Float(10,6),nullable=False)
 
 
 class Cursos(connector.Manager.Base):
