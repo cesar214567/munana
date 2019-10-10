@@ -21,7 +21,7 @@ function PostContacto(){
         document.getElementById("alarma").innerText="porfavor rellene todos los campos obligatorios";
         return;
     }
-    if(nombre_de_hijo=="" && edad_de_hijo=="") {
+    if(nombre_de_hijo=="" && edad_de_hijo=="" ) {
         $.ajax({
             url: '/contacto/' + username,
             type: 'GET',
@@ -55,8 +55,44 @@ function PostContacto(){
             }
         });
     }else{
-        document.getElementById("alarma").innerText="Se le olvido poner el nombre o la edad de su hijo";
-        return;
+        if(nombre_de_hijo!="" && edad_de_hijo!="" ){
+            $.ajax({
+                url: '/contacto/' + username,
+                type: 'GET',
+                success: function (response) {
+                    //alert(JSON.stringify(response)); 
+                    //response=JSON.stringify(response);
+                    if (response.length == 0) {
+                        
+                        $.ajax({
+                            url: '/contacto',
+                            type: 'POST',
+                            contentType: 'application/json',
+                            data: text2,
+                            dataType: 'json',
+                            success: function (response) {
+                                //alert(JSON.stringify(response));
+                                //response=JSON.stringify(response);
+    
+                            },
+                            error: function (response) {
+                            }
+                        })
+                    } else {
+                        document.getElementById("alarma").innerText = "el username ya esta siendo usado";
+                        return;
+                    }
+                    window.location = "http://127.0.0.1:8080/Login";
+                    
+                },
+                error: function (response) {
+                }
+            })
+        }else{
+            document.getElementById("alarma").innerText="Se le olvido poner el nombre o la edad de su hijo";
+            return;
+        }
+        
     }
 
 
