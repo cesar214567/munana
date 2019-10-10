@@ -107,7 +107,7 @@ def create_contacto():
     return 'Created Contacto'
 
 @app.route('/contacto3', methods=['POST'])
-def create_contacto():
+def create_contacto3():
     c = json.loads(request.data)
     print(c)
     contacto = entities.Contacto(
