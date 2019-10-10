@@ -123,7 +123,6 @@ def create_contacto2():
 
 
 
-
 @app.route('/contacto', methods=['PUT'])
 def update_contacto():
     session = db.getSession(engine)
@@ -379,7 +378,9 @@ def create_academia():
         Nombre=c['Nombre'],
         Direccion=c['Direccion'],
         Descripcion=c['Descripcion'],
-        Distrito=c['Distrito']
+        Distrito=c['Distrito'],
+        Geo_x=c['Geo_x'],
+        Geo_y=c['Geo_y']
     )
     session = db.getSession(engine)
     session.add(academia)

@@ -16,7 +16,7 @@ function PostContacto(){
     var edad_de_hijo=document.getElementById("edad_de_hijo").value;
     var Distrito=document.getElementById("distrito").innerText;
     var text={ "Username":username,"Password":password,"Nombre":nombre,"Telefono":telefono,"Correo":correo,"Nombre_de_hijo":nombre_de_hijo,"Edad_de_hijo":edad_de_hijo,"Distrito":Distrito};
-    text2=text;
+    text2=JSON.stringify(text);
     if (username==="" || password==="" || nombre==="" || telefono==="" || correo==="" || Distrito==="DISTRITO"){
         document.getElementById("alarma").innerText="porfavor rellene todos los campos obligatorios";
         return;
