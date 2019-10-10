@@ -106,6 +106,24 @@ def create_contacto():
     session.commit()
     return 'Created Contacto'
 
+@app.route('/contacto3', methods=['POST'])
+def create_contacto():
+    c = json.loads(request.data)
+    print(c)
+    contacto = entities.Contacto(
+        Username=c['Username'],
+        Password=c['Password'],
+        Nombre=c['Nombre'],
+        Telefono=c['Telefono'],
+        Correo=c['Correo'],
+        Nombre_de_hijo=c['Nombre_de_hijo'],
+        Edad_de_hijo=int(c['Edad_de_hijo']),
+        Distrito=c['Distrito'])
+    session = db.getSession(engine)
+    session.add(contacto)
+    session.commit()
+    return 'Created Contacto'
+
 @app.route('/contacto2', methods=['POST'])
 def create_contacto2():
     c = json.loads(request.data)

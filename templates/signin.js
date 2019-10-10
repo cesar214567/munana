@@ -55,7 +55,7 @@ function PostContacto(){
             }
         });
     }else{
-        if(nombre_de_hijo!="" && edad_de_hijo!="" ){
+        if(nombre_de_hijo!="" && edad_de_hijo!="" ){    
             $.ajax({
                 url: '/contacto/' + username,
                 type: 'GET',
