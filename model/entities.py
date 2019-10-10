@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, Sequence, DateTime, ForeignKey,f
 from sqlalchemy.orm import relationship
 from database import connector
 import datetime
-
+from sqlalchemy.types import Float
 
 
 
@@ -57,8 +57,8 @@ class Academia(connector.Manager.Base):
     Direccion=Column(String(80),nullable=False)
     Descripcion=Column(String(80),nullable=False)
     Distrito=Column(String(40),nullable=False)
-    Geo_x=Column(Float(10,6),nullable=False)
-    Geo_y=Column(Float(10,6),nullable=False)
+    Geo_x=Column(Float(53,32),nullable=False)
+    Geo_y=Column(Float(53,32),nullable=False)
 
 
 class Cursos(connector.Manager.Base):
