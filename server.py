@@ -456,8 +456,8 @@ def authenticate():
                 if user.Username == username and user.Password == password:
                     message = {'message': 'Authorized', 'user': user}
                     cache[0] = user
-                    return Response(json.dumps(message, cls=connector.AlchemyEncoder), status=200,
-                                    mimetype='application/json')
+                    cache[1] = password 
+                    return Response(json.dumps(message, cls=connector.AlchemyEncoder), status=200,mimetype='application/json')
                 else:
                     message = {'message': 'Unauthorized'}
                     return Response(message, status=401, mimetype='application/json')
