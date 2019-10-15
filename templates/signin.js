@@ -48,7 +48,7 @@ function PostContacto(){
                     document.getElementById("alarma").innerText = "el username ya esta siendo usado";
                     return;
                 }
-                window.location = "http://127.0.0.1:8080/Login";
+                window.location = "http://munana.herokuapp.com/Login";
                 
             },
             error: function (response) {
@@ -82,7 +82,7 @@ function PostContacto(){
                         document.getElementById("alarma").innerText = "el username ya esta siendo usado";
                         return;
                     }
-                    window.location = "http://127.0.0.1:8080/Login";
+                    window.location = "http://munana.herokuapp.com/Login";
                     
                 },
                 error: function (response) {
