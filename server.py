@@ -458,9 +458,8 @@ def authenticate():
                     cache[0] = user
                     cache[1] = password 
                     return Response(json.dumps(message, cls=connector.AlchemyEncoder), status=200,mimetype='application/json')
-                else:
-                    message = {'message': 'Unauthorized'}
-                    return Response(message, status=401, mimetype='application/json')
+                message = {'message': 'Unauthorized'}
+                return Response(message, status=401, mimetype='application/json')
 
 
 @app.route('/current', methods=["GET"])
