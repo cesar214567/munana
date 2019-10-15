@@ -26,7 +26,7 @@ function getData(){
                 //response=JSON.stringify(response);
                 console.log(response);
                 if (response['status']==401){
-
+                    console.log(response);
                 }else {
                     //console.log(response);
                     if (response["message"] == "admin") {
