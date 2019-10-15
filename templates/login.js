@@ -26,7 +26,7 @@ function getData(){
                 //response=JSON.stringify(response);
                 console.log(response);
                 if (response['status']==401){
-                    console.log(response);
+                    console.log("HOLA");
                 }else {
                     //console.log(response);
                     if (response["message"] == "admin") {
@@ -39,7 +39,7 @@ function getData(){
                 }
             },
             error: function(response){
-                //alert(JSON.stringify(response));
+                alert(JSON.stringify(response));
                 var c="http://munana.herokuapp.com/static/administrador.html";
 
             }
