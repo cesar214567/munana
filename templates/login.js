@@ -24,7 +24,7 @@ function getData(){
             success: function(response){
                 //alert(JSON.stringify(response));
                 //response=JSON.stringify(response);
-                //console.log(response);
+                console.log(response);
                 if (response['status']==401){
 
                 }else {
