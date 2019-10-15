@@ -22,7 +22,7 @@ function getData(){
             data : message,
             dataType:'json',
             success: function(response){
-                //alert(JSON.stringify(response));
+                alert(JSON.stringify(response));
                 //response=JSON.stringify(response);
                 console.log(response);
                 if (response['status']==401){
