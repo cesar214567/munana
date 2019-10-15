@@ -22,9 +22,9 @@ function getData(){
             data : message,
             dataType:'json',
             success: function(response){
-                alert(JSON.stringify(response));
+                //alert(JSON.stringify(response));
                 //response=JSON.stringify(response);
-                console.log(response);
+                //console.log(response);
                 if (response['status']==401){
                     console.log("HOLA");
                 }else {
@@ -39,7 +39,7 @@ function getData(){
                 }
             },
             error: function(response){
-                alert(JSON.stringify(response));
+                //alert(JSON.stringify(response));
                 var c="http://munana.herokuapp.com/static/administrador.html";
 
             }
