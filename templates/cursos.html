@@ -29,7 +29,7 @@ max-height: 10%;
     <style>
       /* Set the size of the div element that contains the map */
       #map {
-        height: 600px;  /* The height is 400 pixels */
+        height: 550px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
     </style>
@@ -130,7 +130,7 @@ function initMap() {
   var knockstar = {lat: -12.1229, lng: -77.0168};
   // The map, centered at Knockstar
   var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 10, center: knockstar});
+      document.getElementById('map'), {zoom: 12, center: knockstar});
   // The marker, positioned at Knockstar
   var marker = new google.maps.Marker({position: knockstar, map: map});
 }
