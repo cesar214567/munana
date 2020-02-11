@@ -101,16 +101,7 @@ max-height: 10%;
         </div>
   </div>
         <tbody id="tabla"></tbody>
-	<script>
-		var arr = [];
-		$("#tabla tr").each(function(){
-		    arr.push($(this).find("td:first").text());
-		});
-		for (i=0;i<arr.length;i++)
-		{
-		document.write(arr[i] + "<br >");
-		}
-	</script>
+	
         </div>
         <div onload="getPorAcademia({{message}})"></div>
         <div class="col-6">
