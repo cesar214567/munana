@@ -100,7 +100,17 @@ max-height: 10%;
         <a class="waves-effect waves-light btn " onclick="Filtrar()"><p class="blanco">Filtrar</p></a>
         </div>
   </div>
-            <ul onload="Nombre({{message}})"></ul>
+        <tbody id="tabla"></tbody>
+	<script>
+		var arr = [];
+		$("#tabla tr").each(function(){
+		    arr.push($(this).find("td:first").text());
+		});
+		for (i=0;i<arr.length;i++)
+		{
+		document.write(arr[i] + "<br >");
+		}
+	</script>
         </div>
         <div onload="getPorAcademia({{message}})"></div>
         <div class="col-6">
