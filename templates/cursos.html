@@ -83,64 +83,63 @@
         </div>
         <div class="col-6">
             <div id="map"></div>
-            <script>
-                // this variable will collect the html which will eventually be placed in the side_bar
-                var side_bar_html = "";
-                // arrays to hold copies of the markers and html used by the side_bar
-                // because the function closure trick doesnt work there
-                var gmarkers = [];
-                // A function to create the marker and set up the event window
-                function createMarker(point,name,html) {
-                var marker = new GMarker(point);
-                GEvent.addListener(marker, "click", function() {
-                    marker.openInfoWindowHtml(html);
-                });
-                // save the info we need to use later for the side_bar
-                gmarkers.push(marker);
-                // add a line to the side_bar html
-                side_bar_html += '<a href="javascript:myclick(' + (gmarkers.length-1) + ')">' + name + '<\/a><br>';
-                 return marker;
-                }
-                // This function picks up the click and opens the corresponding info window
-                function myclick(i) {
-                    GEvent.trigger(gmarkers[i], "click");
-                }
-                // create the map
-                var map = new google.maps.Map(document.getElementById("map"));
-                map.addControl(new GLargeMapControl());
-                map.addControl(new GMapTypeControl());
-                map.setCenter(new GLatLng(-12.1229,-77.0168), 13);
-                // add the points    
-                var point = new GLatLng(-12.1229,-77.0168);
-                var marker = createMarker(point,"Knockstar Team","Academia de Muay Thai, Jiu Jitsu y Taekwondo")
-                map.addOverlay(marker);
-                // put the assembled side_bar_html contents into the side_bar div
-                document.getElementById("side_bar").innerHTML = side_bar_html;
-                // Initialize and add the map
-                /*function initMap() {
-                    // The location of Knockstar
-                    var knockstar = {
-                        lat: -12.1229,
-                        lng: -77.0168
-                    };
-                    // The map, centered at Knockstar
-                    var map = new google.maps.Map(
-                        document.getElementById('map'), {
-                            zoom: 13,
-                            center: knockstar
-                        });
-                    // The marker, positioned at Knockstar
-                    var marker = new google.maps.Marker({
-                        position: knockstar,
-                        map: map
-                    });
-                }*/
-            </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1wntvm2QgmnnY3p_MxY9kEFD7mD5Ulg0&callback=initMap">
-            </script>
-
         </div>
     </div>
+    <script>
+        // this variable will collect the html which will eventually be placed in the side_bar
+        var side_bar_html = "";
+        // arrays to hold copies of the markers and html used by the side_bar
+        // because the function closure trick doesnt work there
+        var gmarkers = [];
+        // A function to create the marker and set up the event window
+        function createMarker(point,name,html) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() {
+            marker.openInfoWindowHtml(html);
+        });
+        // save the info we need to use later for the side_bar
+        gmarkers.push(marker);
+        // add a line to the side_bar html
+        side_bar_html += '<a href="javascript:myclick(' + (gmarkers.length-1) + ')">' + name + '<\/a><br>';
+         return marker;
+        }
+        // This function picks up the click and opens the corresponding info window
+        function myclick(i) {
+            GEvent.trigger(gmarkers[i], "click");
+        }
+        // create the map
+        var map = new google.maps.Map(document.getElementById("map"));
+        map.addControl(new GLargeMapControl());
+        map.addControl(new GMapTypeControl());
+        map.setCenter(new GLatLng(-12.1229,-77.0168), 13);
+        // add the points    
+        var point = new GLatLng(-12.1229,-77.0168);
+        var marker = createMarker(point,"Knockstar Team","Academia de Muay Thai, Jiu Jitsu y Taekwondo")
+        map.addOverlay(marker);
+        // put the assembled side_bar_html contents into the side_bar div
+        document.getElementById("side_bar").innerHTML = side_bar_html;
+        // Initialize and add the map
+        /*function initMap() {
+            // The location of Knockstar
+            var knockstar = {
+                lat: -12.1229,
+                lng: -77.0168
+            };
+            // The map, centered at Knockstar
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 13,
+                    center: knockstar
+                });
+            // The marker, positioned at Knockstar
+            var marker = new google.maps.Marker({
+                position: knockstar,
+                map: map
+            });
+        }*/
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1wntvm2QgmnnY3p_MxY9kEFD7mD5Ulg0&callback=initMap">
+    </script>
 </body>
 
 </html>
