@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Cursos</title>
@@ -13,43 +14,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style type="text/css">
-.blanco{
-    color: #ffffff ;
-}
-.texto{
-    min-height: 100%;
-}
-.imagen{
-max-height: 10%;
-    max-width: 100%;
-}
-
-</style>
-    
-    <style>
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 545px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
+        .blanco {
+            color: #ffffff;
+        }
+        
+        .texto {
+            min-height: 100%;
+        }
+        
+        .imagen {
+            max-height: 10%;
+            max-width: 100%;
+        }
     </style>
-	
+
+    <style>
+        /* Set the size of the div element that contains the map */
+        
+        #map {
+            height: 545px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+
 </head>
+
 <body class="grey darken-3" onload="getAll('{{message}}')">
-   <nav>
-    <div class="nav-wrapper teal lighten-1 ">
-      <a href="/" class="brand-logo blanco" style="padding-left: 10px"><img src="/static/images/logo.png" width="24%">Munana</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/Academias" class="blanco">Academias</a></li>
-          <li><a href="/Curso" class="blanco">Cursos</a></li>
-          <li><a href="/Paquete" class="blanco">Paquetes</a></li>
-          <li><a href="/Login" class="blanco">Comentarios</a></li>
-      </ul>
-    </div>
-   </nav>
+    <nav>
+        <div class="nav-wrapper teal lighten-1 ">
+            <a href="/" class="brand-logo blanco" style="padding-left: 10px"><img src="/static/images/logo.png" width="24%">Munana</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/Academias" class="blanco">Academias</a></li>
+                <li><a href="/Curso" class="blanco">Cursos</a></li>
+                <li><a href="/Paquete" class="blanco">Paquetes</a></li>
+                <li><a href="/Login" class="blanco">Comentarios</a></li>
+            </ul>
+        </div>
+    </nav>
 
-
-<!--<div>
+    <!--<div>
     <table class="table table-striped table-dark">
         <thead>
           <tr>
@@ -71,57 +76,71 @@ max-height: 10%;
             </ul>
         </div>
 <div onload="getPorAcademia({{message}})"></div>-->
-    <div class="row">    
+    <div class="row">
         <div class="col-6">
-		<div class="row">
-      <div class="col s1">
-        <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="dropdownn1">Disciplinas</a>
-          <ul id='dropdown1' class='dropdown-content'>
-        </ul>
-        </div>
-      <div class="col s1">
-        <a class='dropdown-trigger btn' href='#' data-target='dropdown2' id="dropdownn2">Distrito</a>
-            <ul id='dropdown2' class='dropdown-content'>
-            </ul>
-        </div>
-      <div class="col s1">
-        <a class='dropdown-trigger btn' href='#' data-target='dropdown3' id="dropdownn3">Turno</a>
-            <ul id='dropdown3' class='dropdown-content'>
-            <li><a href="#!" onclick="Turno('Mañana')">Mañana</a></li><li class="divider" tabindex="-1"></li>
-            <li><a href="#!" onclick="Turno('Tarde')">Tarde</a></li><li class="divider" tabindex="-1"></li>
-            <li><a href="#!" onclick="Turno('Noche')">Noche</a></li><li class="divider" tabindex="-1"></li>
-            </ul>
-        </div>
-      <div class="col s1">
-        <a class="waves-effect waves-light btn " onclick="Filtrar()"><p class="blanco">Filtrar</p></a>
-        </div>
-  </div>
-	<table class="table table-striped table-dark">
-        <tbody id="tabla">
+            <div class="row">
+                <div class="col s1">
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1' id="dropdownn1">Disciplinas</a>
+                    <ul id='dropdown1' class='dropdown-content'>
+                    </ul>
+                </div>
+                <div class="col s1">
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown2' id="dropdownn2">Distrito</a>
+                    <ul id='dropdown2' class='dropdown-content'>
+                    </ul>
+                </div>
+                <div class="col s1">
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown3' id="dropdownn3">Turno</a>
+                    <ul id='dropdown3' class='dropdown-content'>
+                        <li><a href="#!" onclick="Turno('Mañana')">Mañana</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!" onclick="Turno('Tarde')">Tarde</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!" onclick="Turno('Noche')">Noche</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                    </ul>
+                </div>
+                <div class="col s1">
+                    <a class="waves-effect waves-light btn " onclick="Filtrar()">
+                        <p class="blanco">Filtrar</p>
+                    </a>
+                </div>
+            </div>
+            <table class="table table-striped table-dark">
+                <tbody id="tabla">
 
-	</tbody>
-	</table>
+                </tbody>
+            </table>
         </div>
         <div onload="getPorAcademia({{message}})"></div>
         <div class="col-6">
             <div id="map"></div>
-    <script>
-// Initialize and add the map
-function initMap() {
-  // The location of Knockstar
-  var knockstar = {lat: -12.1229, lng: -77.0168};
-  // The map, centered at Knockstar
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 13, center: knockstar});
-  // The marker, positioned at Knockstar
-  var marker = new google.maps.Marker({position: knockstar, map: map});
-}
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1wntvm2QgmnnY3p_MxY9kEFD7mD5Ulg0&callback=initMap">
-    </script>
+            <script>
+                // Initialize and add the map
+                function initMap() {
+                    // The location of Knockstar
+                    var knockstar = {
+                        lat: -12.1229,
+                        lng: -77.0168
+                    };
+                    // The map, centered at Knockstar
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), {
+                            zoom: 13,
+                            center: knockstar
+                        });
+                    // The marker, positioned at Knockstar
+                    var marker = new google.maps.Marker({
+                        position: knockstar,
+                        map: map
+                    });
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1wntvm2QgmnnY3p_MxY9kEFD7mD5Ulg0&callback=initMap">
+            </script>
 
-	</div>
+        </div>
     </div>
 </body>
+
 </html>
