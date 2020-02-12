@@ -79,7 +79,9 @@
 <div onload="getPorAcademia({{message}})"></div>-->
     <div class="row">
         <div class="col-6">
-            <div id="side_bar"></div>
+            <div id="side_bar">
+                font-size:medium;
+            </div>
         </div>
         <div class="col-6">
             <div id="map"></div>
@@ -93,15 +95,15 @@
         var gmarkers = [];
         // A function to create the marker and set up the event window
         function createMarker(point,name,html) {
-        var marker = new GMarker(point);
-        GEvent.addListener(marker, "click", function() {
-            marker.openInfoWindowHtml(html);
-        });
-        // save the info we need to use later for the side_bar
-        gmarkers.push(marker);
-        // add a line to the side_bar html
-        side_bar_html += '<a href="javascript:myclick(' + (gmarkers.length-1) + ')">' + name + '<\/a><br>';
-         return marker;
+            var marker = new GMarker(point);
+            GEvent.addListener(marker, "click", function() {
+                marker.openInfoWindowHtml(html);
+            });
+            // save the info we need to use later for the side_bar
+            gmarkers.push(marker);
+            // add a line to the side_bar html
+            side_bar_html += '<a href="javascript:myclick(' + (gmarkers.length-1) + ')">' + name + '<\/a><br>';
+            return marker;
         }
         // This function picks up the click and opens the corresponding info window
         function myclick(i) {
