@@ -23,6 +23,50 @@
 max-height: 10%;
     max-width: 100%;
 }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: Arial;
+      }
+
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #ddd;
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #ccc;
+      }
+
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+
+    </style>
 
 </style>
 
@@ -65,11 +109,120 @@ max-height: 10%;
            </div>
            </div>
        </div>
-    {%endfor%}-->
+    {%endfor%}
     
     <iframe src="https://calendar.google.com/calendar/embed?height=550&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLima&amp;src=ZjJvM2d1ajAxcHR0ZnIwbjJlZ2VuYWozbTRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23ba0c00&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;mode=WEEK&amp;showCalendars=1&amp;showTz=1&amp;hl=es_419" style="border:solid 1px #777" width="1270" height="550" frameborder="0" scrolling="no"></iframe>
+    </div>-->
+<div class="tab">
+      <button class="tablinks" onclick="openDay(event, '1')" id="defaultOpen">HOY<br><span id="date"></span></button>
+      <button class="tablinks" onclick="openDay(event, '2')"><span id="day2"></span><br><span id="date1"></span></button>
+      <button class="tablinks" onclick="openDay(event, '3')"><span id="day3"></span><br><span id="date2"></span></button>
+      <button class="tablinks" onclick="openDay(event, '4')"><span id="day4"></span><br><span id="date3"></span></button>
+      <button class="tablinks" onclick="openDay(event, '5')"><span id="day5"></span><br><span id="date4"></span></button>
+      <button class="tablinks" onclick="openDay(event, '6')"><span id="day6"></span><br><span id="date5"></span></button>
+      <button class="tablinks" onclick="openDay(event, '7')"><span id="day7"></span><br><span id="date6"></span></button>
     </div>
 
+    <div id="1" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="2" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="3" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+      function openDay(evt, day) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(day).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+
+      // Get the date
+      var d = new Date();
+      var days = ["DOM", "LUN", "MAR", "MIE", "JUE", "VIE", "SAB"];
+      var months = ["enero.", "feb.", "mar.", "abr.", "mayo.", "jun.", "jul.", "agosto.", "sept.", "oct.", "nov.", "dic."];
+      document.getElementById("day2").innerHTML = days[d.getDay() + 1];
+      document.getElementById("day3").innerHTML = days[d.getDay() + 2];
+      document.getElementById("day4").innerHTML = days[d.getDay() + 3];
+      document.getElementById("day5").innerHTML = days[d.getDay() + 4];
+      document.getElementById("day6").innerHTML = days[d.getDay() + 5];
+      document.getElementById("day7").innerHTML = days[d.getDay() + 6];
+      var date = d.getDate();
+      var month = d.getMonth();
+      var year = d.getFullYear();
+      var str = "date";
+      document.getElementById("date").innerHTML = date + " " + months[month];
+      document.getElementById("date").style.fontSize = "12px";
+      document.getElementById("date1").style.fontSize = "12px";
+      document.getElementById("date2").style.fontSize = "12px";
+      document.getElementById("date3").style.fontSize = "12px";
+      document.getElementById("date4").style.fontSize = "12px";
+      document.getElementById("date5").style.fontSize = "12px";
+      document.getElementById("date6").style.fontSize = "12px";
+      for (var i = 1; i <= 6; i++) {
+        date = d.getDate();
+        month = d.getMonth();
+        if (month == 1) {
+          if (year % 4 == 0) {
+            if (date + i > 29) {
+              date = date + i - 29;
+              month = month + 1;
+              document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+            } else {
+              date = date + i;
+              document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+            }
+          } else {
+            if (date + i > 28) {
+              date = date + i - 28;
+              month = month + 1;
+              document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+            } else {
+              date = date + i;
+              document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+            }
+          }
+        } else if (month == 3 || month == 5 || month == 8 || month == 10) {
+          if (date + i > 30) {
+            date = date + i - 30;
+            month = month + 1;
+            document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+          } else {
+            date = date + i;
+            document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+          }
+        } else {
+          if (date + i > 31) {
+            date = date + i - 31;
+            month = month + 1;
+            document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+          } else {
+            date = date + i;
+            document.getElementById(str.concat(i.toString())).innerHTML = date + " " + months[month];
+          }
+        }
+      }
+
+    </script>
 
 
 </body>
