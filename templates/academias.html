@@ -115,12 +115,12 @@ max-height: 10%;
     </div>-->
 <div class="tab">
       <button class="tablinks" onclick="openDay(event, '1')" id="defaultOpen">HOY<br><span id="date"></span></button>
-      <button class="tablinks" onclick="openDay(event, '2')"><span id="day2"></span><br><span id="date1"></span></button>
-      <button class="tablinks" onclick="openDay(event, '3')"><span id="day3"></span><br><span id="date2"></span></button>
-      <button class="tablinks" onclick="openDay(event, '4')"><span id="day4"></span><br><span id="date3"></span></button>
-      <button class="tablinks" onclick="openDay(event, '5')"><span id="day5"></span><br><span id="date4"></span></button>
-      <button class="tablinks" onclick="openDay(event, '6')"><span id="day6"></span><br><span id="date5"></span></button>
-      <button class="tablinks" onclick="openDay(event, '7')"><span id="day7"></span><br><span id="date6"></span></button>
+      <button class="tablinks" onclick="openDay(event, '2')"><span id="day1"></span><br><span id="date1"></span></button>
+      <button class="tablinks" onclick="openDay(event, '3')"><span id="day2"></span><br><span id="date2"></span></button>
+      <button class="tablinks" onclick="openDay(event, '4')"><span id="day3"></span><br><span id="date3"></span></button>
+      <button class="tablinks" onclick="openDay(event, '5')"><span id="day4"></span><br><span id="date4"></span></button>
+      <button class="tablinks" onclick="openDay(event, '6')"><span id="day5"></span><br><span id="date5"></span></button>
+      <button class="tablinks" onclick="openDay(event, '7')"><span id="day6"></span><br><span id="date6"></span></button>
     </div>
 
     <div id="1" class="tabcontent">
@@ -174,12 +174,12 @@ max-height: 10%;
       var months = ["enero.", "feb.", "mar.", "abr.", "mayo.", "jun.", "jul.", "agosto.", "sept.", "oct.", "nov.", "dic."];
       var day = d.getDay();
       var str = "day";
-      for(var x = 1; x<=6; x++){
+      for(var i = 1; i<=6; i++){
           day = d.getDay();
-          if(day + x > 6){
-              document.getElementById(str.concat(x.toString())).innerHTML = days[d.getDay() + x - 6]
+          if(day + i > 6){
+              document.getElementById(str.concat(i.toString())).innerHTML = days[day + i - 7];
           }else{
-              document.getElementById(str.concat(i.toString())).innerHTML = days[d.getDay() + x]
+              document.getElementById(str.concat(i.toString())).innerHTML = days[day + i];
           }
       }
       var date = d.getDate();
