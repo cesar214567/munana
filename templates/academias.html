@@ -172,16 +172,20 @@ max-height: 10%;
       var d = new Date();
       var days = ["DOM", "LUN", "MAR", "MIE", "JUE", "VIE", "SAB"];
       var months = ["enero.", "feb.", "mar.", "abr.", "mayo.", "jun.", "jul.", "agosto.", "sept.", "oct.", "nov.", "dic."];
-      document.getElementById("day2").innerHTML = days[d.getDay() + 1];
-      document.getElementById("day3").innerHTML = days[d.getDay() + 2];
-      document.getElementById("day4").innerHTML = days[d.getDay() + 3];
-      document.getElementById("day5").innerHTML = days[d.getDay() + 4];
-      document.getElementById("day6").innerHTML = days[d.getDay() + 5];
-      document.getElementById("day7").innerHTML = days[d.getDay() + 6];
+      var day = d.getDay();
+      var str = "day";
+      for(var x = 1; x<=6; x++){
+          day = d.getDay();
+          if(day + x > 6){
+              document.getElementById(str.concat(x.toString())).innerHTML = days[d.getDay() + x - 6]
+          }else{
+              document.getElementById(str.concat(i.toString())).innerHTML = days[d.getDay() + x]
+          }
+      }
       var date = d.getDate();
       var month = d.getMonth();
       var year = d.getFullYear();
-      var str = "date";
+      str = "date";
       document.getElementById("date").innerHTML = date + " " + months[month];
       document.getElementById("date").style.fontSize = "12px";
       document.getElementById("date1").style.fontSize = "12px";
