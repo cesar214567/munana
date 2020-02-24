@@ -33,6 +33,21 @@ body {
 }
 
 </style>
+	
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+#section1 {
+  height: 600px;
+}
+
+#section2 {
+  height: 600px;
+  background-color: black;
+}
+</style>
 </head>
 <body class="grey darken-3 " background="/static/images/gif.gif">
 
@@ -52,7 +67,7 @@ body {
    <br>
    <br>
 
-<div class="row">
+<div class="main" id="section1">
     <div class="col-2"></div>
     <div class="col-5 blanco" >
         <H1 >Descubriendo los pequeños grandes guerreros del futuro</H1>
@@ -66,7 +81,10 @@ body {
 
 </div>
 
-
+<div class="main" id="section2">
+  <h2>Section 2</h2>
+  <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+</div>
 
 </body>
 </html>
