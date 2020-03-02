@@ -83,9 +83,32 @@ $(function(){
             dataField:"Dia_de_semana",
             lookup: {
                 dataSource: week,
+                displayExpr: "Name",
+                valueExpr: "ID"
             }
         }
         ]
     }).dxDataGrid("instance");
-    var week = [Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo];
+    var week = [{
+    "ID": 1,
+    "Name": "Lunes"
+}, {
+    "ID": 2,
+    "Name": "Martes"
+}, {
+    "ID": 3,
+    "Name": "Miercoles"
+}, {
+    "ID": 4,
+    "Name": "Jueves"
+}, {
+    "ID": 5,
+    "Name": "Sabado"
+}, {
+    "ID": 6,
+    "Name": "Domingo"
+}, {
+    "ID": 7,
+    "Name": "Connecticut"
+}];
 });
