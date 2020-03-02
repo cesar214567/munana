@@ -79,7 +79,13 @@ $(function(){
             dataType:"number"
         },{
             dataField:"Profesor",
+        },{
+            dataField:"Dia_de_semana",
+            lookup: {
+                dataSource: week,
+            }
         }
         ]
     }).dxDataGrid("instance");
+    var week = [Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo];
 });
