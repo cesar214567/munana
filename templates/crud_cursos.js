@@ -84,7 +84,6 @@ $(function(){
             lookup: {
                 dataSource: week,
                 displayExpr: "Name",
-                valueExpr: "ID"
             }
         }
         ]
