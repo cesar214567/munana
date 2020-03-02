@@ -88,7 +88,8 @@ $(function(){
         }
         ]
     }).dxDataGrid("instance");
-    var week = [{
+});
+var week = [{
     "ID": 1,
     "Name": "Lunes"
 }, {
@@ -102,12 +103,11 @@ $(function(){
     "Name": "Jueves"
 }, {
     "ID": 5,
-    "Name": "Sabado"
+    "Name": "Viernes"
 }, {
     "ID": 6,
-    "Name": "Domingo"
+    "Name": "Sabado"
 }, {
     "ID": 7,
-    "Name": "Connecticut"
+    "Name": "Domingo"
 }];
-});
